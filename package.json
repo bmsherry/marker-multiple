@@ -1,0 +1,36 @@
+{
+  "name": "pdf-markdown-server",
+  "version": "1.0.0",
+  "description": "PDF处理和静态资源服务器，支持PDF转Markdown和静态文件浏览",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "process-pdfs": "node pdf_processor.js ./literature ./output",
+    "serve": "node index.js ./output"
+  },
+  "keywords": [
+    "pdf",
+    "markdown",
+    "static-server",
+    "file-server",
+    "document-processing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "path": "^0.12.7",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "readme": "# PDF处理和静态资源服务器\n\n这个项目包含两个主要功能：\n\n1. PDF处理工具：将PDF文件转换为Markdown格式\n2. 静态资源服务器：提供图片和Markdown文件的浏览服务\n\n## 使用方法\n\n### PDF处理\n\n```bash\nnpm run process-pdfs -- <输入目录> <输出目录>\n```\n\n### 启动静态服务器\n\n```bash\nnpm run serve\n```\n\n或指定目录：\n\n```bash\nnpm run serve -- <目录路径>\n```\n"
+} 
